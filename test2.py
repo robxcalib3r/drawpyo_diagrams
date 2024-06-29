@@ -16,17 +16,15 @@ def mkSrvr(locX: float, locY: float, numSrvr: int, distSrvr: float) -> list:
         distSrvr: Distance between servers (0 ~ 1 ~ server height)
     '''
 
-    srvr = drawpyo.diagram.object_from_library(page=page, 
-                              library="servers",
-                              obj_name="1u_rack_server",
-                              )
-    rackHeight = srvr.geometry.height * numSrvr
+    srvr_height = 15
+    srvr_width = 130
+    rackHeight = srvr_height * numSrvr
     estHeight_srvrs = rackHeight + rackHeight * distSrvr
     movable_length = page.height - estHeight_srvrs
     
     rel_min_Y = page.height/2 - movable_length/2
 
-    min_X = (page.width * locX - srvr.geometry.width)
+    min_X = (page.width * locX - srvr_width)
     if min_X < 0:
         min_X = 0
 
@@ -34,17 +32,22 @@ def mkSrvr(locX: float, locY: float, numSrvr: int, distSrvr: float) -> list:
     if min_Y < 0:
         min_Y = 0
 
-    max_Y = page.height * locY + estHeight_srvrs/2 + srvr.geometry.height
+    max_Y = page.height * locY + estHeight_srvrs/2 + srvr_height
     if max_Y > movable_length:
         max_Y = movable_length
 
     srvrs = [0] * numSrvr
-    srvrs[0].position = (0, 0)
+    # srvrs[0].position = (0, 0)
     for i in range(numSrvr):
-        srvrs[i] = srvr
-        
+        srvrs[i] = drawpyo.diagram.object_from_library(page=page, 
+                              library="servers",
+                              obj_name="1u_rack_server",
+                              )
+        if i == 0:
+            srvrs[0].position = (min_X, min_Y)
         if i != 0:
-            srvrs[i].position = (min_X, min_Y + (srvr.geometry.height + srvr.geometry.height*distSrvr) * i)
+            srvrs[i].position = (min_X, min_Y + (srvrs[i].geometry.height + srvrs[i].geometry.height*distSrvr) * i)
+    # print(srvrs)
     return srvrs
 
 
@@ -80,6 +83,6 @@ def mkConPnts(obj, numPnts: int, locPnts: int):
 
 
 if __name__ == "__main__":
-    srvr = mkSrvr(1)
-    mkConPnts(srvr[0], 1, 2)
+    srvr = mkSrvr(0.5, 0.5, 5, 1)
+    # mkConPnts(srvr[0], 1, 2)
     diagram.write()

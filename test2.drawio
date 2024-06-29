@@ -1,11 +1,23 @@
-<mxfile host="Drawpyo" modified="2024-06-26T16:11:44" agent="Python 3.11, Drawpyo 0.01" version="21.6.5" type="device">
-  <diagram name="Page-1" id="2188703233808">
+<mxfile host="Drawpyo" modified="2024-06-27T09:53:58" agent="Python 3.11, Drawpyo 0.01" version="21.6.5" type="device">
+  <diagram name="Page-1" id="3205542443280">
     <mxGraphModel dx="2037" dy="830" grid="1" gridSize="10" guides="1" toolTips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="700" pageHeight="400" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2188703234576" value="" style="whiteSpace=wrap;rounded=0;dashed=0;shape=mxgraph.rack.general.1u_rack_server;align=left;points=[[0.5, 1, 0, 0, 0]];" vertex="1" parent="1">
-  <mxGeometry x="0" y="0" width="130" height="15" as="geometry" />
+        <mxCell id="3205542477968" value="" style="whiteSpace=wrap;rounded=0;dashed=0;shape=mxgraph.rack.general.1u_rack_server;align=left;" vertex="1" parent="1">
+  <mxGeometry x="220.0" y="125.0" width="130" height="15" as="geometry" />
+</mxCell>
+        <mxCell id="3205542478608" value="" style="whiteSpace=wrap;rounded=0;dashed=0;shape=mxgraph.rack.general.1u_rack_server;align=left;" vertex="1" parent="1">
+  <mxGeometry x="220.0" y="155.0" width="130" height="15" as="geometry" />
+</mxCell>
+        <mxCell id="3205542487248" value="" style="whiteSpace=wrap;rounded=0;dashed=0;shape=mxgraph.rack.general.1u_rack_server;align=left;" vertex="1" parent="1">
+  <mxGeometry x="220.0" y="185.0" width="130" height="15" as="geometry" />
+</mxCell>
+        <mxCell id="3205542784592" value="" style="whiteSpace=wrap;rounded=0;dashed=0;shape=mxgraph.rack.general.1u_rack_server;align=left;" vertex="1" parent="1">
+  <mxGeometry x="220.0" y="215.0" width="130" height="15" as="geometry" />
+</mxCell>
+        <mxCell id="3205546216400" value="" style="whiteSpace=wrap;rounded=0;dashed=0;shape=mxgraph.rack.general.1u_rack_server;align=left;" vertex="1" parent="1">
+  <mxGeometry x="220.0" y="245.0" width="130" height="15" as="geometry" />
 </mxCell>
       </root>
     </mxGraphModel>
